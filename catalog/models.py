@@ -10,7 +10,7 @@ class Genre(models.Model):
 class Director(models.Model):
     fname = models.CharField(max_length=20, verbose_name='Имя')
     lname = models.CharField(max_length=20, verbose_name='Фамилия')
-    born = models.DateField(blank=True, null=True, verbose_name='Дата рождения')
+
     def __str__(self):
         return f'{self.fname},{self.lname}'
 
