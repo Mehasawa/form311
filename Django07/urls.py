@@ -16,12 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from catalog import views
+from proverka import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('form/1/', views.formcomment, name='forma1'),
     path('', views.index, name='home'),
-    path('kino/', views.Kinolist123.as_view(), name='allkino'),
-    # path('kino/<int:id>/', views.info, name='info'),
-    path('kino/<slug:pk>/', views.KinoDetail.as_view(), name='info'),
+    path('finish/', views.finish, name='finish'),
+    path('form/2/', views.formtel, name='forma2'),
 ]
